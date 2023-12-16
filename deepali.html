@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Greeting</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+
+      .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 20px 30px 50px rgb(22, 23, 22);
+        overflow: hidden;
+        width: 550px;
+        text-align: center;
+        height: 950px;
+        background-image: url("star.gif");
+      }
+
+      .content {
+        padding: 20px;
+        color: red;
+        font-size: 35px;
+      }
+      audio {
+        float: right;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        margin-top: 50px;
+        width: 200px;
+        font-size: 25px;
+        border-radius: 10px;
+      }
+
+      .surprise {
+        display: none;
+        padding: 20px;
+        color: violet;
+      }
+
+      figure {
+        color: red;
+        font-weight: bold;
+        background-color: white;
+        font-size: 40px;
+        border-radius: 10px;
+        box-shadow: 10px 10px 20px yellow;
+      }
+
+      .surprise img {
+        width: 60%;
+        height: auto;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="content">
+        <h1>Happy Birthday!</h1>
+        <p>Wishing you a day filled with love, joy, and surprises!</p>
+        <audio src="song.mp3" loop="100" id="audio" autoplay></audio>
+        <button onclick="showSurprise()">Open Surprise</button>
+      </div>
+
+      <div class="surprise" id="surprise">
+        <figcaption>
+          <img src="cake.jpg" alt="" />
+          <figure>Happy Birthday Deepali</figure>
+        </figcaption>
+
+        <p>🎉 Surprise! 🎉</p>
+      </div>
+    </div>
+
+    <script>
+      function showSurprise() {
+        const surpriseDiv = document.getElementById("surprise");
+        const audio = document.getElementById("audio");
+
+        surpriseDiv.style.display = "block";
+        audio.play();
+      }
+    </script>
+  </body>
+</html>
